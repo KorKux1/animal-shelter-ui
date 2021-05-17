@@ -6,7 +6,9 @@ const opts = {
     pactBroker: process.env.PACT_BROKER_URL,
     pactBrokerToken: process.env.PACT_BROKER_TOKEN,
     consumerVersion: process.env.PACT_CONSUMER_VERSION,
-    pactFilesOrDirs: ["./test/contract/pacts/."],
+    pactFilesOrDirs: [
+        "./test/contract/logs/AnimalShelterFront-AnimalShelterBack.log",
+    ],
 };
 
-new Publisher(opts).publishPacts();
+new Publisher().publishPacts();
